@@ -2,12 +2,10 @@ const { Router } = require('express');
 
 const router = new Router();
 
-router.get('/', (req, res) => {
-  return res.send('Hello World');
-});
+const { userRoutes } = require('./User/');
 
-router.get('/', (req, res) => {
-  return res.send('Hello World');
-});
+router.use('/user', userRoutes);
+
+
 
 module.exports = router;
